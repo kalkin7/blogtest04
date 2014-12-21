@@ -13,7 +13,7 @@ layout: default
       <a href="{{ post.url }}"><h2 class="post-title">{{ post.title }}</h2></a>
 
       <p class="post-meta">
-        Published on {{ post.date | date: "%Y년 %m월 %d일" }} By <a href="#" class="post-author">{% if post.author %}{{ post.author}}{% endif %}</a> under {% for category in post.categories %}<a class="post-category post-category-design" href="#">{{ category }}</a>{% endfor %}</p>
+        작성일: {{ post.date | date: "%Y-%m-%d" }} &nbsp;&nbsp;작성자: <a href="#" class="post-author">{% if post.author %}{{ post.author}}{% endif %}</a> &nbsp;&nbsp;분류: {% for category in post.categories %}<a class="post-category post-category-design" href="#">{{ category }}</a>{% endfor %}</p>
       </header>
 
       <div class="post-description">
