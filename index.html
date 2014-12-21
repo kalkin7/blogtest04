@@ -5,7 +5,7 @@ layout: default
 {% for post in site.posts %}
 <!-- A wrapper for all the blog posts -->
 <div class="posts">
-  <h1 class="content-subhead">All Posts</h1>
+  <h1 class="content-subhead">Latest Posts</h1>
 
   <!-- A single blog post -->
   <section class="post">
@@ -13,7 +13,7 @@ layout: default
       <a href="{{ post.url }}"><h2 class="post-title">{{ post.title }}</h2></a>
 
       <p class="post-meta">
-        Published on {{ post.date | date_to_long_string }} By <a href="#" class="post-author">{% if post.author %}{{ post.author}}{% endif %}</a> under {% for category in post.categories %}<a class="post-category post-category-design" href="#">{{ category }}</a>{% endfor %}</p>
+        Published on {{ post.date | date: "%Y년 %m월 %d일" }} By <a href="#" class="post-author">{% if post.author %}{{ post.author}}{% endif %}</a> under {% for category in post.categories %}<a class="post-category post-category-design" href="#">{{ category }}</a>{% endfor %}</p>
       </header>
 
       <div class="post-description">
